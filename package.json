@@ -1,0 +1,19 @@
+{
+  "name": "mizan-memory-engine",
+  "version": "0.1.0",
+  "description": "A standalone long-term memory system for AI agents. Supports WAL protocol, semantic search, vector embeddings, automatic summarization, and memory decay. Works with any LLM agent.",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [
+    "moj",
+    "uae",
+    "justice",
+    "ai-agent"
+  ],
+  "author": "mizanuae10x",
+  "license": "MIT"
+}
