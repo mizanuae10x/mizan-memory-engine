@@ -1,19 +1,32 @@
 {
   "name": "mizan-memory-engine",
   "version": "0.1.0",
-  "description": "A standalone long-term memory system for AI agents. Supports WAL protocol, semantic search, vector embeddings, automatic summarization, and memory decay. Works with any LLM agent.",
+  "description": "A standalone long-term memory system for AI agents. Supports WAL protocol, semantic search, vector embeddings, automatic summarization, and memory decay.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "npx ts-node src/index.ts",
+    "test": "node --require ts-node/register tests/run.ts",
+    "serve": "npx ts-node src/server.ts",
+    "cli": "npx ts-node src/cli.ts"
   },
-  "keywords": [
-    "moj",
-    "uae",
-    "justice",
-    "ai-agent"
-  ],
+  "keywords": ["ai-agent", "memory", "vector-search", "wal", "embeddings"],
   "author": "mizanuae10x",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "commander": "^12.0.0",
+    "express": "^4.21.0",
+    "openai": "^4.80.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.7.0"
+  }
 }
